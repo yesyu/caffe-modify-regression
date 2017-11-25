@@ -3,9 +3,10 @@
 
 # 1. 首先将tools/convert_imagenet.cpp复制一份，并重命名为：[convert_imageset_regression.cpp](https://github.com/yesyu/caffe-modify-regression/blob/master/convert_imageset_regression.cpp)
  具体修改详见代码。
+# 2. 修改[io.hpp](https://github.com/yesyu/caffe-modify-regression/blob/master/io.hpp)文件，利用函数重载[ReadImageToDatum](https://github.com/yesyu/caffe-modify-regression/blob/97a8fb9aeac30455d181ad9c022a51b23ef19fbb/io.hpp#L103)函数，并修改相应的[io.cpp](https://github.com/yesyu/caffe-modify-regression/blob/master/io.cpp)文件中对应的[函数](https://github.com/yesyu/caffe-modify-regression/blob/97a8fb9aeac30455d181ad9c022a51b23ef19fbb/io.cpp#L145)
 
-# 2. 修改[data_layer.cpp](https://github.com/yesyu/caffe-modify-regression/blob/master/data_layer.cpp)文件.
-# 3. 修改caffe.proto,找到message DataParameter部分的定义，在最后加上:
+# 3. 修改[data_layer.cpp](https://github.com/yesyu/caffe-modify-regression/blob/master/data_layer.cpp)文件.
+# 4. 修改caffe.proto,找到message DataParameter部分的定义，在最后加上:
   ```python
   optional uint32 label_num = 11;
   ```
