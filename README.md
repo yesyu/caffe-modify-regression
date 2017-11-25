@@ -16,7 +16,7 @@ The format of train.txt:
 1.jpg 0.2 0.3 0.04 0.05
 ...
 ```
-# train_val.prototxt
+## train_val.prototxt
   ```
   data_param {
     source: "examples/mnist/mnist_train_lmdb"
